@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UMAMR Restaurant</title>
+  <link rel="stylesheet" href="css/style.css">
+  	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+	body {
+		font-family: Arial, sans-serif;
+		background-color: #f2f2f2;
+	}
+	
+	header {
+		background-color: #333;
+		color: #fff;
+		padding: 1rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	
+	h1 {
+		font-size: 2rem;
+		margin: 0;
+	}
+	
+	nav ul {
+		list-style: none;
+		display: flex;
+	}
+	
+	nav li {
+		margin-left: 1rem;
+	}
+	
+	nav a {
+		color: #fff;
+		text-decoration: none;
+		padding: 0.5rem;
+	}
+	
+	nav a:hover {
+		background-color: #fff;
+		color: #333;
+	}
+	
+	main {
+		max-width: 600px;
+		margin: 2rem auto;
+		background-color: #fff;
+		padding: 2rem;
+		border-radius: 0.5rem;
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+	}
+	
+	h2 {
+		font-size: 1.5rem;
+		margin-bottom: 1rem;
+		text-align: center;
+	}
+	
+	p {
+		margin-bottom: 1rem;
+		text-align: justify;
+	}
+	
+	.best-dishes {
+		margin-top: 2rem;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	
+	.best-dishes .dish {
+		flex-basis: calc(33.33% - 1rem);
+		margin-bottom: 1rem;
+		background-color: #f2f2f2;
+		padding: 1rem;
+		border-radius: 0.5rem;
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+		text-align: center;
+	}
+	
+	.best-dishes .dish img {
+		height: 150px;
+		width: 150px;
+		object-fit: cover;
+		margin-bottom: 1rem;
+		border-radius: 50%;
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+	}
+	
+	.best-dishes .dish h3 {
+		font-size: 1.2rem;
+		margin-bottom: 0.5rem;
+	}
+	
+	.best-dishes .dish p {
+		margin: 0;
+		font-size: 0.9rem;
+	}
+	</style>
+</head>
+<body>
+  <header>
+		<h1>UMAMR</h1>
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="menu.html">Menu</a></li>
+				<li><a href="about.html" class="active">About Us</a></li>
+				<li><a href="contact.html">Contact</a></li>
+				<li><a href="booking.html">Book a Table</a></li>
+			</ul>
+		</nav>
+  </header>
+
+  <section class="hero-section">
+    <div class="hero-content">
+      <h1>Experience the Taste of Egypt</h1>
+      <p>Enjoy authentic Egyptian food made from fresh ingredients.</p>
+      <a href="menu.html" class="btn-primary">View Our Menu</a>
+    </div>
+  </section>
+
+  <section class="about-section">
+  <div style="text-align: center;">
+    <h2>About UMAMR Restaurant</h2>
+    <img src="images/about.jpg" alt="UMAMR Restaurant">
+  </section> 
+  
+  <section>
+  <p></p>
+  </section>
+   
+  <section>
+    <p>UMAMR Restaurant is the best place to experience authentic Egyptian food in Ireland. Our dishes are made using traditional recipes and fresh ingredients to give you a taste of Egypt right here in Clare.</p>
+  </section>
+
+  <section class="quote-section">
+    <p>"UMAMR is hands down the best Egyptian restaurant in Dublin. The food is always delicious and the service is excellent. I highly recommend the Koshari and the Mulukhiyah!"</p>
+    <span>- John Doe, Ennis</span>
+  </section>
+  
+  <section>
+  <p></p>
+  </section>
+
+  <section class="chef-section">
+  <div style="text-align: center;">
+    <h3>Meet Our Chef</h3>
+    <img src="images/chef.jpg" alt="Chef">
+    <p>Our head chef, Amr Sayed, has over 40 years of experience in cooking Egyptian cuisine. He uses traditional cooking methods, as well as fresh ingredients to create delicious and authentic dishes.</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2023 UMAMR. All rights reserved.</p>
+  </footer>
+</body>
+</html>

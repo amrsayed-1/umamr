@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>UMAMR Restaurant - Menu</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f2f2f2;
+		}
+		
+		header {
+			background-color: #333;
+			color: #fff;
+			padding: 1rem;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		
+		h1 {
+			font-size: 2rem;
+			margin: 0;
+		}
+		
+		nav ul {
+			list-style: none;
+			display: flex;
+		}
+		
+		nav li {
+			margin-left: 1rem;
+		}
+		
+		nav a {
+			color: #fff;
+			text-decoration: none;
+			padding: 0.5rem;
+		}
+		
+		nav a:hover {
+			background-color: #fff;
+			color: #333;
+		}
+		
+		main {
+			max-width: 600px;
+			margin: 2rem auto;
+			background-color: #fff;
+			padding: 2rem;
+			border-radius: 0.5rem;
+			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+		}
+		
+		h2 {
+			font-size: 1.5rem;
+			margin-bottom: 1rem;
+			text-align: center;
+		}
+		
+		label {
+			display: block;
+			margin-bottom: 0.5rem;
+		}
+		
+		input[type="text"],
+		input[type="email"],
+		input[type="tel"],
+		input[type="date"],
+		input[type="time"],
+		input[type="number"] {
+			display: block;
+			width: 100%;
+			padding: 0.5rem;
+			border: none;
+			border-radius: 0.25rem;
+			margin-bottom: 1rem;
+			background-color: #f2f2f2;
+		}
+		
+		input[type="submit"] {
+			background-color: #333;
+			color: #fff;
+			padding: 0.5rem;
+			border: none;
+			border-radius: 0.25rem;
+			cursor: pointer;
+		}
+		
+		input[type="submit"]:hover {
+			background-color: #fff;
+			color: #333;
+		}
+		
+		.menu-item {
+			display: flex;
+			align-items: center;
+			margin-bottom: 1rem;
+		}
+		
+		.menu-item img {
+			height: 150px;
+			width: 150px;
+			object-fit: cover;
+			margin-right: 1rem;
+		}
+		
+		.menu-item h3 {
+			font-size: 1.2rem;
+			margin-bottom: 0.5rem;
+		}
+		
+		.menu-item p {
+			margin: 0;
+			font-size: 0.9rem;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>UMAMR</h1>
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="menu.html" class="active">Menu</a></li>
+				<li><a href="about.html">About Us</a></li>
+				<li><a href="contact.html">Contact</a></li>
+				<li><a href="booking.html">Book a Table</a></li>
+				
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<h2>Menu</h2>
+		<div class="menu-item">
+			<img src="images/koshari.jpg" alt="Koshari">
+			<h4>Koshari</h4>
+			<p>A popular Egyptian dish made of rice, lentils, and pasta, topped with tomato sauce and caramelized onions.</p>
+			<p class="price">€8.99</p>
+		</div>
+		<div class="menu-item">
+			<img src="images/falafel.jpg" alt="Falafel">
+			<h4>Falafel</h4>
+			<p>A vegetarian dish made of ground Egyptian Fava Beans and spices, formed into balls and deep-fried, served with tahini sauce and pita bread.</p>
+			<p class="price">€6.99</p>
+		</div>
+		<div class="menu-item">
+			<img src="images/kabab.jpg" alt="Kabab">
+			<h4>Kabab</h4>
+			<p>A skewered and grilled meat dish, made with beef or lamb, served with rice and grilled vegetables.</p>
+			<p class="price">€12.99</p>
+		</div>
+		<div class="menu-item">
+			<img src="images/mulukhiyah.jpg" alt="Mulukhiyah">
+			<h4>Mulukhiyah</h4>
+			<p>A traditional Egyptian soup made with jute leaves, served with rice and chicken.</p>
+			<p class="price">€9.99</p>
+		</div>
+	</main>
+  <footer>
+    <p>&copy; 2023 UMAMR. All rights reserved.</p>
+  </footer>
+</body>
+</html>
