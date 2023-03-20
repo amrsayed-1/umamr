@@ -1,26 +1,36 @@
 <?php
-  if($_POST){
-    $to_email = "your-email@example.com";
-    $subject = "Table Booking Request";
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $phone = $_POST['phone'];
-    $date = $_POST['date'];
-    $time = $_POST['time'];
-    $guests = $_POST['guests'];
-    $comments = $_POST['comments'];
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Get the form data
+    $name = test_input($_POST["name"]);
+    $email = test_input($_POST["email"]);
+    $phone = test_input($_POST["phone"]);
+    $date = test_input($_POST["date"]);
+    $time = test_input($_POST["time"]);
+    $guests = test_input($_POST["guests"]);
+    $comments = test_input($_POST["comments"]);
+    $customer_email = test_input($_POST["customer_email"]);
+    
+    // Validate email
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $emailErr = "Invalid email format";
+    }
+    
+    // Send email
+    $to = $customer_email;
+    $subject = "New Reservation";
+    $message = "Name: $name\nEmail: $email\nPhone: $phone\nDate: $date\nTime: $time\nGuests: $guests\nComments: $comments";
+    mail($to, $subject, $message);
+    
+    // Redirect to thank-you page
+    header("Location: thankyou.php");
+    exit();
+}
 
-    $message = "Name: " . $name . "\r\n";
-    $message .= "Email: " . $email . "\r\n";
-    $message .= "Phone: " . $phone . "\r\n";
-    $message .= "Date: " . $date . "\r\n";
-    $message .= "Time: " . $time . "\r\n";
-    $message .= "Number of guests: " . $guests . "\r\n";
-    $message .= "Comments: " . $comments . "\r\n";
-
-    $headers = "From: " . $email . "\r\n";
-    $headers .= "Reply-To: " . $email . "\r\n";
-
-    mail($to_email,$subject,$message,$headers);
-  }
+// Helper function to sanitize form data
+function test_input($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+}
 ?>
